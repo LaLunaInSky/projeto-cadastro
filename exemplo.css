@@ -1,0 +1,545 @@
+@charset "UTF-8";
+
+:root {
+    --preto01: #000000;
+    --preto02: #3C3C3C;
+    --preto03: #5E5E5E;
+    --preto04: #808080;
+    --preto05: #A2A2A2;
+    --preto06: #C3C3C3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background-color: var(--preto01);
+}
+
+body {
+    display: none;
+}
+
+@media (min-width:320px)  {
+    body {
+        display: block;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+        height: 100%;
+        background-color: var(--preto02);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caixaPrincipal {
+        width: 450px;
+        height: 600px;
+        margin: 10px;
+        border-radius: 30px;
+        background-color: white;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        & > h1 {
+            cursor: default;
+            text-align: center;
+            padding: 15px 15px 5px;
+        }
+
+        & > section {
+            width: 95%;
+            height: 100%;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            overflow: hidden;
+
+            & > .registroTarefas {
+                display: block; /*default block*/
+                height: 100%;
+                padding: 15px 20px;
+                background-color: var(--preto05);
+
+                & > h2 {
+                    cursor: default;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: 1.4em;
+                }
+
+                & > div:nth-child(2) {
+                    display: flex;
+                    flex-flow: column;
+
+                    & > label {
+                        margin-left: 15px;
+                        font-size: 1.15em;
+                    }
+
+                    & > input {
+                        margin: 0px 5px;
+                        border-radius: 10px;
+                        padding: 2px 10px;
+                        font-size: 1.2em;
+                    }
+                }
+
+                & > div:nth-child(3) {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+
+                    & > div:nth-child(1) {
+                        width: 45%;
+                        margin-top: 5px;
+                        display: flex;
+                        flex-flow: column;
+
+                        & > label {
+                            font-size: 1.05em;
+                            padding: 2px;
+                            text-align: center;
+                        }
+
+                        & > input {
+                            margin: 0px 10px 0px;
+                            font-size: 1.1em;
+                            padding: 2px;
+                            text-align: center;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    & > div:nth-child(2) {
+                        width: 45%;
+                        display: flex;
+                        flex-flow: column;
+
+                        & > label {
+                            padding: 10px 3px 5px;
+                            font-size: 1.2em;
+                            text-align: center;
+                        }
+
+                        & > select {
+                            margin-top: 5px;
+                            border-radius: 10px;
+                            padding: 3.5px;
+                            text-align: center;
+                            font-size: 1.05em;
+                        }
+                    }
+                }
+
+                & > div:nth-child(4) {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-flow: column;
+
+                    & > label {
+                        font-size: 1.1em;
+                        padding: 5px 15px 2px;
+                    }
+
+                    & > textarea {
+                        padding: 10px;
+                        font-size: 1.2em;
+                        text-align: left;
+                        margin-left: 10px;
+                        border-radius: 10px;
+                    }
+                }
+
+                & > div:nth-child(5) {
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: center;
+
+                    & > input {
+                        cursor: pointer;
+                        padding: 10px;
+                        margin: 10px;
+                        font-weight: bold;
+                        border-radius: 10px;
+                        font-size: 1.3em;
+                        color: white;
+                        background-color: var(--preto02);
+
+                        &:hover {
+                            color: var(--preto01);
+                            background-color: var(--preto05);
+                        }
+                    }
+                }
+            }
+
+            & > .menuComTarefasAdicionadas {
+                display: none;
+                height: 100%;
+                padding: 10px;
+                background-color: var(--preto02);
+                justify-content: center;
+                align-items: center;
+
+                & > h1 {
+                    display: block; /*default block*/
+                    padding: 0px 10px;
+                    color: white;
+                    text-align: center;
+                    font-size: 1.7em;
+                }
+
+                & > .tarefasAdicionadas {
+                    display: none;
+                    flex-flow: column;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    background-color: var(--preto03);
+
+                    & > article {
+                        cursor: default;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: 40px;
+                        border: 2px solid white;
+                        border-top: #000000;
+                        border-left: #000000;
+                        border-right: #000000;
+
+                        &:hover {
+                            background-color: var(--preto01);
+                        }
+
+                        & .icone {
+                            cursor: pointer;
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+
+                            &:hover {
+                                background-color: var(--preto02);
+                            }
+                        }
+
+                        & > h2 {
+                            color: white;
+                            font-size: 1.3em;
+                        }
+
+                        & > div {
+                            display: flex;
+                        }
+
+                        & img {
+                            margin-top: 3px;
+                            margin-right: 1px;
+                            width: 20px;
+                        }
+                    }
+                }
+
+                & > .info_EditarTarefa{
+                    display: none; /*default none*/
+                    flex-flow: column;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    background-color: var(--preto03);
+
+                    & > section {
+                        height: 40px;
+                        display: flex;
+                        justify-content: right;
+                        align-items: center;
+
+                        & > img {
+                            cursor: pointer;
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 5px;
+                            border-radius: 50%;
+
+                            &:hover {
+                                background-color: #000000;
+                            }
+                        }
+                    }
+
+                    & > div {
+                        display: block;
+                        height: 100%;
+                    }
+
+                    & > .editar{
+                        background-color: var(--preto04);
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+
+                        & > h2 {
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            font-size: 1.4em;
+                        }
+
+                        & > div:nth-child(2) {
+                            margin-top: 5px;
+                            width: 90%;
+                            display: flex;
+                            flex-flow: column;
+
+                            & > label {
+                                font-size: 1.1em;
+                                margin-left: 10px;
+                            }
+
+                            & > input {
+                                font-size: 1.1em;
+                                border-radius: 10px;
+                                padding: 2px 5px;
+                            }
+                        }
+
+                        & > div:nth-child(3) {
+                            margin-top: 15px;
+                            width: 90%;
+                            display: flex;
+                            justify-content: space-between;
+                        
+                            & > div {
+                                width: 48%;
+                                display: flex;
+                                flex-flow: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            & > div:nth-child(1) {
+                                & > label {
+                                    font-size: 1.1em;
+                                    text-align: center;
+                                    margin-bottom: 5px;
+                                }
+
+                                & > input {
+                                    width: 80%;
+                                    text-align: center;
+                                    padding: 2px;
+                                    border-radius: 5px;
+                                }
+
+                            }
+
+                            & > div:nth-child(2) {
+                                & > label {
+                                    font-size: 1.4em;
+                                    margin-bottom: 5px;
+                                }
+
+                                & > select {
+                                    width: 80%;
+                                    font-size: 1em;
+                                    text-align: center;
+                                    border-radius: 5px;
+                                    padding: 2px;
+                                }
+                            }
+                        }
+
+                        & > div:nth-child(4) {
+                            margin-top: 10px;
+                            display: flex;
+                            flex-flow: column;
+                            width: 90%;
+
+                            & > label {
+                                font-size: 1.2em;
+                                margin-left: 10px;
+                                padding: 5px 0px;
+                            }
+
+                            & > textarea {
+                                font-size: 1.1em;
+                                padding: 5px;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        & > div:nth-child(5) {
+                            margin-top: 20px;
+
+                            & > input {
+                                cursor: pointer;
+                                font-size: 1.5em;
+                                padding: 5px;
+                                border-radius: 10px;
+                                background-color: var(--preto06);
+                            
+                                &:hover {
+                                    color: white;
+                                    background-color: var(--preto01);
+                                }
+                            }
+                        }
+                    }
+
+                    & > .info {
+                        display: none; /*deafault flex*/
+                        flex-flow: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: var(--preto04);
+                        color: white;
+
+                        & > h2 {
+                            color: white;
+                            cursor: default;
+                            margin-top: 20px;
+                            font-size: 1em;
+                        }
+
+                        & > h3 {
+                            cursor: default;
+                            margin-top: 3px;
+                            font-weight: bold;
+                            font-size: 1.4em;
+                        }
+
+                        & > div h2 {
+                            color: white;
+                            font-weight: bolder;
+                        }
+
+                        & > .datas {
+                            margin-top: 30px;
+                            width: 95%;
+                            display: flex;
+                            justify-content: space-around;
+
+                            & > div {
+                                background-color: var(--preto03);
+                                box-shadow: 0px 0px 5px 2px var(--preto06);
+                                padding: 5px;
+                                border-radius: 10px;
+                                cursor: default;
+                                display: flex;
+                                flex-flow: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                & > h2 {
+                                    font-size: 0.85em;
+                                }
+
+                                & > h3 {
+                                    margin-top: 5px;
+                                    font-size: 0.9em;
+                                }
+                            }
+                        }
+
+                        & > .prioridadeEConclusão {
+                            cursor: default;
+                            margin-top: 35px;
+                            width: 75%;
+                            display: flex;
+                            justify-content: space-between;
+
+                            & > div {
+                                background-color: var(--preto03);
+                                box-shadow: 0px 0px 5px 2px var(--preto06);
+                                padding: 10px;
+                                border-radius: 10px;
+                                display: flex;
+                                flex-flow: column;
+                                align-items: center;
+
+                                & > h2 {
+                                    font-size: 0.9em;
+                                }
+
+                                & > h3 {
+                                    margin-top: 4px;
+                                    font-size: 1em;
+                                }
+                            }
+
+                            & > div:nth-child(1) > h3 {
+                                color: black;
+                            }
+                        }
+
+                        & > .descriçãoT {
+                            background-color: var(--preto03);
+                            box-shadow: 0px 0px 5px 2px var(--preto06);
+                            padding: 10px;
+                            border-radius: 10px;
+                            cursor: default;
+                            margin-top: 30px;
+                            width: 85%;
+
+                            & > h2 {
+                                font-size: 1em;
+                            }
+
+                            & > p {
+                                margin-top: 10px;
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > aside {
+                font-size: 0.9em;
+                cursor: pointer;
+                text-align: center;
+                padding: 10px;
+                color: white;
+                background-color: var(--preto02);
+                transition: padding 200ms ease-in-out;
+
+                &:hover {
+                    background-color: var(--preto03);
+                    padding: 15px;
+                    transition: padding 200ms ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:400px)  {
+    .info h2 {
+        font-size: 1.5em;
+    }
+
+    .datas {
+        font-size: 1.1em;
+    }
+
+    .prioridadeEConclusão {
+        font-size: 1.2em;
+    }
+}
