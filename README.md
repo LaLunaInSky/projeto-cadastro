@@ -1,1 +1,1 @@
-Para acessar a página deste projeto [Clique Aqui!](https://lalunainsky.com/projeto-cadastro/)
+Para acessar a página deste projeto [Clique Aqui!](https://lalunainsky.github.io/projeto-cadastro/)
