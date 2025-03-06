@@ -364,6 +364,9 @@
   .text-neutral-100 {
     color: var(--color-neutral-100);
   }
+  .text-neutral-300 {
+    color: var(--color-neutral-300);
+  }
   .text-neutral-800 {
     color: var(--color-neutral-800);
   }
