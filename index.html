@@ -1,15 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
-    <title>LaLunaInSky | Projeto Cadastro</title>
-</head>
-<body class="bg-slate-950 h-dvh w-full">
-    <main>
-        <h1>Hello World!</h1>
-    </main>
-    <script src="scripts/script.js"></script>
-</body>
+<html 
+    lang="pt-br"
+>
+    <head>
+        <meta 
+            charset="UTF-8"
+        >
+        <meta 
+            name="viewport" 
+            content="
+                width=device-width, initial-scale=1.0
+            "
+        >
+        <link 
+            rel="stylesheet" 
+            href="./output.css"
+        >
+        <title>
+            LaLunaInSky | Projeto Cadastro
+        </title>
+    </head>
+    <body 
+        class="
+            bg-neutral-800 h-dvh w-full flex justify-center items-center
+        "
+    >
+        <main
+            class="
+                w-80 h-106 rounded-2xl bg-neutral-50 shadow-lg shadow-neutral-950 outline-2 outline-offset-4 outline-neutral-50
+            "
+        >
+            <form 
+                action="" 
+                method="post"
+                class="
+                    p-2
+                "
+            >
+                <div
+                    class="
+                        flex flex-col
+                    "
+                >
+                    <label 
+                        for="usuario"
+                        class="
+                            font-black capitalize ml-3 text-lg mb-0.5 text-neutral-800
+                        "
+                    >
+                        usuário
+                    </label>
+                    <input 
+                        type="text" 
+                        name="usuario" 
+                        id="usuario"
+                        maxlength="30"
+                        required
+                        class="
+                            bg-neutral-400 outline-2 outline-offset-2 outline-neutral-400 rounded-lg text-center mx-2 text-neutral-50 font-bold py-1 focus:outline-neutral-950 focus:text-neutral-50 focus:bg-neutral-600
+                        "
+                    >
+                </div>
+                <div
+                    class="
+                        flex flex-col mt-3
+                    "
+                >
+                    <label 
+                        for="email"
+                        class="
+                            font-black capitalize ml-3 text-lg mb-0.5 text-neutral-800
+                        "
+                    >
+                        email
+                    </label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email"
+                        required
+                        class="
+                            bg-neutral-400 outline-2 outline-offset-2 outline-neutral-400 rounded-lg text-center mx-2 text-neutral-50 font-bold py-1 focus:outline-neutral-950 focus:text-neutral-50 focus:bg-neutral-600
+                        "
+                    >
+                </div>
+                <div
+                    class="
+                        flex flex-col mt-5
+                    "
+                >
+                    <div
+                        class="
+                            flex flex-col
+                        "
+                    >
+                        <label 
+                            for="senha"
+                            class="
+                                font-black capitalize ml-3 text-lg mb-0.5 text-neutral-800
+                            "
+                        >
+                            Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            name="senha" 
+                            id="senha"
+                            required
+                            class="
+                                bg-neutral-400 outline-2 outline-offset-2 outline-neutral-400 rounded-lg text-center mx-2 text-neutral-50 font-bold py-1 focus:outline-neutral-950 focus:text-neutral-50 focus:bg-neutral-600
+                            "
+                        >
+                    </div>
+                    <div
+                        class="
+                            flex flex-col mt-2
+                        "
+                    >
+                        <label 
+                            for="senhaConfirme"
+                            class="
+                                font-black capitalize ml-3 text-lg mb-0.5 text-neutral-800
+                            "
+                        >
+                            Confirme a Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            name="senhaConfirme" 
+                            id="senhaConfirme"
+                            required
+                            class="
+                                bg-neutral-400 outline-2 outline-offset-2 outline-neutral-400 rounded-lg text-center mx-2 text-neutral-50 font-bold py-1 focus:outline-neutral-950 focus:text-neutral-50 focus:bg-neutral-600
+                            "
+                        >
+                    </div>
+                </div>
+            </form>
+        </main>
+        <script 
+            src="script.js"
+        >
+        </script>
+    </body>
 </html> 
